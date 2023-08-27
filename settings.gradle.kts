@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Prinmate"
 include(":app")
 include(":auth")
+include(":core")
