@@ -1,4 +1,7 @@
 package com.devmo.auth.data
 
-class AuthRepositoryImpl {
+import com.devmo.auth.domain.AuthRepository
+
+class AuthRepositoryImpl: AuthRepository {
+
 }
