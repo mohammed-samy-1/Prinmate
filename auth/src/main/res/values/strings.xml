@@ -3,4 +3,12 @@
     <string name="logo">Logo</string>
     <string name="signup">Signup</string>
     <string name="login">Login</string>
+    <string name="hide_password">hide password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="show_password">Show password</string>
+    <string name="don_t_have_an_account">"Don’t have an account? "</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account">"Already have an account? "</string>
 </resources>

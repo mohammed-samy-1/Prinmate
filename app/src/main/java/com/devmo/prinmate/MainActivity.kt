@@ -10,10 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.devmo.auth.presentation.splash.components.SplashScreen2
+import com.devmo.auth.presentation.login.components.LoginScreen
 import com.devmo.prinmate.navigation.NavGraph
 import com.devmo.prinmate.ui.theme.PrinmateTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     PrinmateTheme {
-        SplashScreen2(navController = rememberNavController())
+        LoginScreen(navController = rememberNavController())
     }
 }

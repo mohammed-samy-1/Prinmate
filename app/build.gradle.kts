@@ -51,6 +51,8 @@ android {
 }
 
 dependencies {
+    val nav_version = "2.7.1"
+
     //modules
     implementation(project(":auth"))
     implementation(project(":core"))
@@ -70,9 +72,9 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation("androidx.navigation:navigation-compose")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose")
     implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
 
     // hilt

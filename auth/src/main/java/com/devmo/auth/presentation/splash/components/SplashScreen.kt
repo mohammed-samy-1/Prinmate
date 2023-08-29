@@ -23,6 +23,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -40,13 +41,15 @@ fun SplashScreen(navController: NavController) {
     {
         scope.launch {
             delay(500)
-            navController.navigate(Screens.Splash2.route)
+            navController.navigate(Screens.Splash2.route){
+                popUpTo(Screens.Splash.route){ inclusive = true }
+            }
         }
     }
     Column(
         Modifier
             .fillMaxSize()
-            .background(Color(0xFF222831))
+            .background(colorResource(id = R.color.background))
             .padding(24.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -75,7 +78,7 @@ fun SplashScreen2(navController: NavController) {
     Column(
         Modifier
             .fillMaxSize()
-            .background(Color(0xFF222831))
+            .background(colorResource(id = R.color.background))
             .padding(24.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -91,7 +94,7 @@ fun SplashScreen2(navController: NavController) {
         Spacer(modifier = Modifier.height(36.dp))
         Button(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate(Screens.Login.route) },
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = Color.White
@@ -110,7 +113,7 @@ fun SplashScreen2(navController: NavController) {
 
         OutlinedButton(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate(Screens.SignUp.route) },
             border = BorderStroke(
                 1.dp,
                 MaterialTheme.colorScheme.primary
